@@ -67,11 +67,45 @@ header::before{
 }
 header .content{
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+header .content .btn > *{
+  background-color: var(--secondColor);
+  padding: 10px 30px;
+  width: 200px;
+  color: white;
+  text-align: center;
+  border-radius: 100vmax;
+  font-size: 14.4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
+.faceSide{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.faceSide img{
+  position: relative;
+  top: 10%;
+  right: -20px;
+  width: auto;
+  height: 90%;
+}
+
+header .content :is(h1, p, .btn){
+  margin: 0!important;
+}
 header h1{
-  font-size: 55px;
+  font-size: 50px;  
   max-width: 670px;
+  color: #767C4C;
 }
 header .description{
   font-size: 20px;
@@ -83,7 +117,7 @@ header .description{
 }
 .boxes .box{
     width: 100%;
-    height: 500px;
+    height: 400px;
     background: var(--bgColor);  
     display: flex;
     flex-direction: column;
@@ -92,14 +126,32 @@ header .description{
     color: white;
     box-sizing: border-box;
     padding: 20px;
+    gap: 25px;
 }
+.boxes .box #icon{
+  background-color: rgba(0, 0, 0, 0.11);
+  border-radius: 100vmax;
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxes .box #icon img{
+  width: 70px;
+}
+
 .boxes .box #title{
     font-size: 24px;
+    margin: 0;
 }
 .boxes .box #description{
     max-width: 400px;
     font-size: 20px;
     text-align: center;
+    margin: 0;
 }
 
 .boxes > *:nth-child(1n){
@@ -122,4 +174,18 @@ header .description{
 .bottom > h1{
   color: var(--secondColor);
   font-size: 35px;
+}
+/*
+@media(max-width: 990px){
+  header::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff2a;
+    z-index: -1;
+    backdrop-filter: blur(2px);
+  }
 }
