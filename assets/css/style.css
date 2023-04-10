@@ -59,7 +59,7 @@ header::before{
   right: 0;
   border-bottom: 0;
   height: 100vh;
-  background-image: url(/assets/imgs/wave.png);
+  background-image: url(../imgs/wave.png);
   background-repeat: no-repeat;
   background-size: auto 100vh;
   background-position: right center;
