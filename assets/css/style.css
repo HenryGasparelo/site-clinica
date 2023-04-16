@@ -1,47 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
 
-:root{
-  --firstColor: #708365;
-  --secondColor: #EAB110;
-  --thirdColor: #736EAC;
-}
-
-body{
-    margin: 0;
-    background: #F2F5F2;
-}
-body, *{
-  font-family: 'Istok Web', sans-serif;
-}
-.menu{
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    list-style: none;
-    gap: 10px;
-    align-items: center;
-    z-index: 1;
-}
-.menu > *:first-of-type{
-    margin-right: auto;
-}
-.menu > *:not(:first-of-type) a{
-  padding: 15px;
-  color: white;
-  text-transform: capitalize;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  min-width: 80px;
-}
-.menu > *:not(:first-of-type) a:hover{
-  background: #00000012;
-}
-
 header{
   height: 90vh;
   padding: 0 20px;
@@ -59,7 +17,7 @@ header::before{
   right: 0;
   border-bottom: 0;
   height: 100vh;
-  background-image: url(/assets/imgs/wave.png);
+  background-image: url(../imgs/wave.png);
   background-repeat: no-repeat;
   background-size: auto 100vh;
   background-position: right center;
@@ -82,6 +40,10 @@ header .content .btn > *{
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+header .content .btn > *:hover{
+  background-color: #d8ad02;
 }
 
 .faceSide{
@@ -175,6 +137,7 @@ header .description{
   color: var(--secondColor);
   font-size: 35px;
 }
+
 /*
 @media(max-width: 990px){
   header::after{
