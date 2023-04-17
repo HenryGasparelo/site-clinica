@@ -6,11 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
 </head>
+  <script>
+    function openWindow(window){
+      var element = document.getElementById(window);
+      if(!element) return console.log('Error...');
+      if(element.style.display == 'none'){
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  </script>
+  <body>
+    <nav class="menu">
+      <li class="logo"></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="services.html">Serviços</a></li>
+      <li><a id="selected" href="#">Contato</a></li>
+    </nav>
 
-<body>
-  
+    <div class="cont container">
+      <div class="thumbnail">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d908.2996740004139!2d-53.52038254525809!3d-24.409163764682667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x685b216c6b2940ef%3A0x5decce9fa6fbc0fd!2sCl%C3%ADnica%20Clyp!5e0!3m2!1spt-BR!2sbr!4v1681755291320!5m2!1spt-BR!2sbr" maxwidth="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <article class="content">
+        <h1>Como posso te ajudar?</h1>
+        <ul class="options">
+          <button class="btn option">WhatsApp</button>
+          <button class="btn option">Google Maps</button>
+        </ul>
+        <button class="btn" id="readMore" href="#" onclick="openWindow('test')">Ler Mais</button>
+      </article>
+    </div>
+
+    <div class="cont test" id="test" style="display: none;">
+      <h1>Informações Adicionais</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium animi quaerat maxime eveniet cupiditate. Minus eveniet tempore nulla natus cumque perspiciatis deserunt aut sed, laudantium non labore consequatur corporis voluptates est distinctio voluptate eos impedit dolorem rem praesentium velit aspernatur dolor cum doloremque? Assumenda veniam accusantium impedit neque! Deserunt.    </p>
+    </div>
 </body>
 
 </html>
