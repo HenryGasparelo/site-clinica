@@ -8,42 +8,78 @@
   <title>Contato</title>
   <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/scripts/menu.js"></script>
 </head>
   <script>
+    var timer;
     function openWindow(window){
       var element = document.getElementById(window);
+      var readMore = document.getElementById('readMore');
+
       if(!element) return console.log('Error...');
-      if(element.style.display == 'none'){
-        element.style.display = 'block';
+      if(element.classList.contains('closed') || (!element.classList.contains('closed') && !element.classList.contains('opened'))){
+        clearTimeout(timer);        
+        timer = setTimeout(function(){
+          var elements = [element, readMore];
+          elements.forEach(obj => {
+            obj.classList.add('opened');
+            obj.classList.remove('closed');
+          });
+        }, 10);
       } else {
-        element.style.display = 'none';
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          var elements = [element, readMore];
+          elements.forEach(obj => {
+            obj.classList.add('closed');
+            obj.classList.remove('opened');
+          });
+        }, 10);
       }
     }
   </script>
   <body>
-    <nav class="menu">
+    <nav class="menu" id="menu">
       <li class="logo"></li>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="about.html">Sobre</a></li>
-      <li><a href="services.html">Serviços</a></li>
-      <li><a id="selected" href="#">Contato</a></li>
+      <button id="homeicon">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="submenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="services.html">Serviços</a></li>
+        <li id="selected"><a href="contact.html">Contato</a></li>
+      </ul>
     </nav>
 
-    <div class="cont container">
+    <div class="container mainInfo">
       <div class="thumbnail">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d908.2996740004139!2d-53.52038254525809!3d-24.409163764682667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x685b216c6b2940ef%3A0x5decce9fa6fbc0fd!2sCl%C3%ADnica%20Clyp!5e0!3m2!1spt-BR!2sbr!4v1681755291320!5m2!1spt-BR!2sbr" maxwidth="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d908.2996740004139!2d-53.52038254525809!3d-24.409163764682667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x685b216c6b2940ef%3A0x5decce9fa6fbc0fd!2sCl%C3%ADnica%20Clyp!5e0!3m2!1spt-BR!2sbr!4v1681755291320!5m2!1spt-BR!2sbr" maxwidth="400" height="100%" style="border:0;border-radius:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <article class="content">
         <h1>Como posso te ajudar?</h1>
         <ul class="options">
-          <button class="btn option">WhatsApp</button>
-          <button class="btn option">Google Maps</button>
+          <a href="https://api.whatsapp.com/send?phone=5544999874130" target="_blank" class="btn option">
+            <span id="icon"><img src="assets/imgs/svg/whatsApp.svg"></span>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://goo.gl/maps/rK6brgvKfA6pdBhh7" target="_blank" class="btn option">
+            <span id="icon"><img src="assets/imgs/svg/googleMaps.svg"></span>
+            <span>Google Maps</span>
+          </a>
         </ul>
-        <button class="btn" id="readMore" href="#" onclick="openWindow('test')">Ler Mais</button>
+        <button class="btn" id="readMore" href="#" onclick="openWindow('moreInfo')">
+          <span id="icon">▲</span>
+          <span id="text">Ler Mais</span>
+        </button>
       </article>
     </div>
 
-    <div class="cont test" id="test" style="display: none;">
+    <div class="container moreInfo closed" id="moreInfo">
       <h1>Informações Adicionais</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium animi quaerat maxime eveniet cupiditate. Minus eveniet tempore nulla natus cumque perspiciatis deserunt aut sed, laudantium non labore consequatur corporis voluptates est distinctio voluptate eos impedit dolorem rem praesentium velit aspernatur dolor cum doloremque? Assumenda veniam accusantium impedit neque! Deserunt.    </p>
     </div>

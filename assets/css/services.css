@@ -1,0 +1,135 @@
+.menu{
+    --bgColor: var(--fourColor);
+}
+
+body{
+    padding: 30px 0;
+}
+
+body > .title{
+    color: var(--fourColor);
+    margin: 0 auto;
+    padding: 0 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
+body > .title::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-10px);
+    height: 8px;
+    border-radius: 100vmax;
+    background-color: var(--fourColor);
+    margin: 0 auto;
+    width: 80%;
+}
+.btn{
+    background: transparent;
+    cursor: pointer;    
+    border: none;
+    width: fit-content;
+    transition: filter .3s;
+}
+.btn span{
+    text-decoration: none;
+}
+.btn>:focus{
+    outline: none;
+}
+.btn:hover{
+    transition: filter .5s;
+    filter: brightness(.8);
+}
+
+.boxes{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas:
+		"objA bigA"
+		"objB bigA"
+        "bigB objC"
+        "bigB objD";
+    gap: 10px;
+}
+.boxes > .box:nth-child(2){
+    grid-area: objB;
+}
+.boxes > .box:nth-child(3){
+    grid-area: bigA;    
+}
+.boxes > .box:nth-child(4){
+    grid-area: bigB;
+}
+.boxes > .box{
+    background-color: var(--fourColor);
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.boxes > .box > .title{
+    padding: 15px;
+    height: 20px;
+    background-color: #00000038;
+    background: linear-gradient(0deg, transparent 12.5%, #00000038 100%);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.boxes > .box > .title > *{
+    margin: 0;
+}
+.boxes > .box > .title > #icon{
+    width: 25px;
+}
+.boxes > .box > .title > #icon img{
+    width: 100%;
+    height: auto;
+}
+.boxes > .box > .title > .btn{
+    display: none;
+    margin-left: auto;
+    color: white;
+    font-size: 18px;
+    transform: rotate(180deg);
+}
+.boxes > .box > .content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    line-height: 28px;
+    text-align: justify;
+}
+.boxes > .box > .content > *{
+    margin: 0;
+}
+
+@media(max-width: 820px){
+    .boxes{
+        grid-template-areas: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .boxes > .box > .title > .btn{
+        display: block;
+    }    
+  }
+
+  @media(max-width: 520px){
+    body > .title::after{
+        width: 40%;
+    }
+  }

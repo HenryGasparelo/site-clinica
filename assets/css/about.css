@@ -1,75 +1,46 @@
+/* Mudar cor de fundo do menu por página */
 .menu{
-    background-color: var(--thirdColor);
+    --bgColor: var(--thirdColor);
 }
 
+
+/* ------- Configurações header */
 header{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: var(--thirdColor);
+
     width: 100%;
-    height: 65vh;
+    height: 75vh;    
+    background-color: var(--thirdColor);
+
     position: relative;
     box-sizing: border-box;
-}
-.transition{
-    width: 100%;
-    height: 20px;
-    overflow: hidden;
-    position: relative;
-}
-.transition::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    height: 0;
-    width: 0;
-    border-style: solid;
-    border-width: 20px 100vw 0 0;
-    border-color: var(--thirdColor) transparent transparent transparent;
-    z-index: 0;
-}
-.transition::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    height: 0;
-    width: 0;
-    border-style: solid;
-    border-width: 20px 100vw 0 0;
-    border-color: transparent #f2f5f2 #f2f5f2 #f2f5f2;
-    z-index: 2;
 }
 
 header .thumbnail, header .thumbnailHolder{
     height: 100%;
 }
 header .thumbnail img{
-    height: 100%;
     width: auto;
+    height: 100%;
+
     position: relative;
     top: 20px;
     z-index: 1;
 }
+
 header .content{
-    max-width: 400px;
-    height: 100%;
-    color: white;
-    background-color: transparent;
     display: flex;
     flex-direction: column;
-    flex-direction: center;
     justify-content: center;
     gap: 30px;
+
+    max-width: 400px;
+    height: 100%;
+    background-color: transparent;    
+    color: white;
     margin: 0 10px;
 }
 header .content *{
@@ -80,51 +51,99 @@ header .content .btn > *{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    padding: 10px 30px;
+
     max-width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 30px;
     margin: 0 auto;
+
     color: var(--thirdColor);
     text-align: center;
-    border-radius: 5px;
     font-size: 14.4px;
-    cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
-}
 
+    cursor: pointer;
+}
 header .content .btn > *:hover{
     background-color: rgb(249, 239, 255);
 }
 
+.transition{
+    width: 100%;
+    height: 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+.transition::before{
+    width: 0;
+    height: 0;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    border-style: solid;
+    border-width: 20px 100vw 0 0;
+    border-color: var(--thirdColor) transparent transparent transparent;
+}
+.transition::after{
+    width: 0;
+    height: 0;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    border-style: solid;
+    border-width: 20px 100vw 0 0;
+    border-color: transparent #f2f5f2 #f2f5f2 #f2f5f2;    
+}
+
+
+/* ------- Configurações seção de caixas */
 .subTitle{
-    margin-top: 40px;
     text-align: center;
+    margin-top: 40px;
 }
 
 .boxes{
-    height: 350px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    height: 350px;
     margin: 0 10px;
     margin-bottom: 20px;
 }
 .boxes > *{
-    width: 280px;
-    height: 100%;
-    border-radius: 10px;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    width: 280px;
+    height: 100%;
+    border-radius: 10px;
+    color: white;
+    padding: 30px 20px;
+    
     position: relative;
+    box-sizing: border-box;
     overflow: hidden;
 }
+
 .boxes > *:nth-child(1n){
     background-color: var(--firstColor);
 }
@@ -143,14 +162,12 @@ header .content .btn > *:hover{
     background-color: rgba(0, 0, 0, 0.192);
     border-radius: 100vmax;
     margin: 0 auto;
-    --size: 120px;
-    width: var(--size);
-    height: var(--size);
+    width: 120px;
+    height: 120px;
 }
 .boxes > .box .icon img{
-    --size: 70px;
-    width: var(--size);
-    height: var(--size);
+    width: 70px;
+    height: 70px;
 }
 
 .boxes .description{
@@ -158,45 +175,60 @@ header .content .btn > *:hover{
     font-size: 18px;
 }
 
-@media(max-width: 820px){
-    .boxes{
-        flex-direction: column;
-        height: fit-content;        
-    }
-    .boxes > *{        
-        max-width: 400px;
-        width: 100%;
-        height: 150px;        
-    }
-    .boxes > .box .icon{
-        position: absolute;
-        background: none;
-    }
-    .boxes > .box .icon img{
-        --size: 300px;
-        opacity: 10%;
-    }
-}
+
+/* ------- Configurações LAPTOP */
 @media(max-width: 1200px){
+    header{
+        height: 480px;
+    }
+
     header .thumbnailHolder{
         position: relative;
     }
     header .thumbnail{
-        position: absolute;
-        transform: translateY(100%);
-        overflow: hidden;
-        border-radius: 100vmax;
-        --size: 130px;
-        width: var(--size);
-        height: var(--size);
+        width: 130px;
+        height: 130px;
         background-color: #00000023;
+        border-radius: 100vmax;
+        overflow: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 10px;
+        transform: translateY(50%);
     }
     header .thumbnail img{
         transform: scale(1.5);
         top: 30px;
     }
+
     header .content h1{
-        width: 250px;
-        margin-left: auto;
+        max-width: 250px;
+        margin-left: 145px;
+    }
+}
+
+
+/* ------- Configurações para TABLET */
+@media(max-width: 820px){
+    .boxes{
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .boxes > *{        
+        max-width: 400px;
+        width: 100%;
+        height: 150px;        
+    }
+
+    .boxes > .box .icon{
+        background: none;
+        position: absolute;
+    }
+    .boxes > .box .icon img{
+        width: 200px;
+        height: 200px;
+        opacity: 10%;
     }
 }

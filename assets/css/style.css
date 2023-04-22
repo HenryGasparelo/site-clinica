@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+.menu{
+  --bgColor: #F27405;
+}
 
 header{
-  height: 90vh;
+  min-height: 90vh;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -36,7 +39,7 @@ header .content .btn > *{
   color: white;
   text-align: center;
   border-radius: 100vmax;
-  font-size: 14.4px;
+  font-size: 16px;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
@@ -62,12 +65,12 @@ header .content .btn > *:hover{
 }
 
 header .content :is(h1, p, .btn){
-  margin: 0!important;
+  margin: 0;
 }
 header h1{
   font-size: 50px;  
   max-width: 670px;
-  color: #767C4C;
+  color: #2F321C;
 }
 header .description{
   font-size: 20px;
@@ -79,7 +82,7 @@ header .description{
 }
 .boxes .box{
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     background: var(--bgColor);  
     display: flex;
     flex-direction: column;
@@ -90,10 +93,17 @@ header .description{
     padding: 20px;
     gap: 25px;
 }
+.boxes .box .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .boxes .box #icon{
   background-color: rgba(0, 0, 0, 0.11);
   border-radius: 100vmax;
-  --size: 100px;
+  --size: 80px;
   width: var(--size);
   height: var(--size);
 
@@ -102,7 +112,9 @@ header .description{
   align-items: center;
 }
 .boxes .box #icon img{
-  width: 70px;
+  width: 100%;
+  height: auto;
+  margin: 10px;
 }
 
 .boxes .box #title{
@@ -127,7 +139,7 @@ header .description{
 }
 
 .bottom{
-  height: 300px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,18 +149,130 @@ header .description{
   color: var(--secondColor);
   font-size: 35px;
 }
+.bottom > p{
+  font-size: 18px;
+  margin: 0 10px;
+}
 
-/*
-@media(max-width: 990px){
-  header::after{
-    position: absolute;
+@media(max-width: 820px){
+  header{
+    min-height: 700px;
+  }
+  header::before{
+    background-color: #ff7919;
+    background-image: unset;
+    height: 1000px;
+  }
+  .faceSide{
+    left: 50%;
+    transform: translateX(-70%);
+  }
+  .faceSide::before{
     content: '';
+    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff2a;
-    z-index: -1;
-    backdrop-filter: blur(2px);
+    bottom: 0;
+    width: 120vw;
+    background: linear-gradient(0deg, #ff7919 0%, transparent 50%);
+    z-index: 1;
+  }
+  .faceSide img{
+    opacity: 40%;
+  }
+  .content .description{
+    color: white;
+  }
+}
+
+@media(max-width: 820px){
+  .boxes{
+    flex-direction: column;
+  }
+
+  .boxes .box{
+    min-height: 0;
+    height: 260px;    
+    gap: 10px;
+  }
+  .boxes .box > *{
+    width: 100%;
+    min-width: 0;
+    max-width: 400px!important;
+  }
+  
+  .boxes > *:nth-child(1n){
+    background: linear-gradient(180deg, #878E4F 0%, #7C853D 100%);
+  }
+  .boxes > *:nth-child(2n){
+    background: linear-gradient(180deg, #F3B60D 0%, #E7AB10 100%);
+  }
+  .boxes > *:nth-child(3n){
+    background: linear-gradient(180deg, #736EAC 0%, #5E57A4 100%);
+  }
+  .boxes .box #icon{
+    --size: 60px;
+  }
+
+  .bottom{
+    margin: 0 20px;
+  }
+  .bottom h1{
+    text-align: center;
+  }
+  .bottom p{
+    text-align: center;
+    font-size: 18px;
+  }
+}
+@media(max-width: 520px){
+  header{
+    min-height: 600px;
+  }
+  header .content{
+    margin-left: 0;
+    background: linear-gradient(0deg, #eab11094 0%, transparent 100%);
+    backdrop-filter: blur(1.5px);
+    border-radius: 0 0 10px 10px;
+    margin: 10px;
+  }
+  header .content :is(h1, p){
+    margin: 0 20px!important;
+  }
+  header .content p{
+    text-align: justify;
+  }
+  header .content .btn > *{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 7px;
+  }
+
+  .faceSide {
+    transform: translateX(-70%) scale(1.2);
+  }
+
+  .boxes .box .title{
+    flex-direction: row;
+    justify-content: start;
+  }
+  .boxes .box .title #title{
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .boxes .box #description{
+    text-align: left;
+  }
+  .boxes .box #icon{
+    --size: 60px;
+  }
+
+  .bottom h1{
+    margin-bottom: 5px;
+  }
+  .bottom p{
+    font-size: 20px;
   }
 }

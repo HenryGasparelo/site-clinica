@@ -8,16 +8,27 @@
   <title>Início</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/scripts/scrollcheck.js"></script>
+  <script src="assets/scripts/menu.js"></script>
 </head>
 
 <body>
 
-  <nav class="menu">
+  <nav class="menu" id="menu">
     <li class="logo"></li>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="about.html">Sobre</a></li>
-    <li><a href="services.html">Serviços</a></li>
-    <li><a href="contact.html">Contato</a></li>
+    <button id="homeicon">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="submenu">
+      <li id="selected"><a href="#">Início</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="services.html">Serviços</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
   </nav>
 
   <header>
@@ -33,18 +44,24 @@
 
   <section class="boxes">
     <article class="box">
-        <div id="icon"><img src="assets/imgs/svg/user.svg"></div>
-        <a id="title">Titulo</a>
+        <div class="title">
+          <div id="icon"><img src="assets/imgs/svg/user.svg"></div>
+          <a id="title">Titulo</a>
+        </div>
         <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo sodales nunc, at mollis.</p>
     </article>
     <article class="box">
-        <div id="icon"><img src="assets/imgs/svg/home.svg"></div>
-        <a id="title">Titulo</a>
+        <div class="title">
+          <div id="icon"><img src="assets/imgs/svg/home.svg"></div>
+          <a id="title">Titulo</a>
+        </div>
         <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo sodales nunc, at mollis.</p>
     </article>
     <article class="box">
-        <div id="icon"><img src="assets/imgs/svg/brain.svg"></div>
-        <a id="title">Titulo</a>
+        <div class="title">
+          <div id="icon"><img src="assets/imgs/svg/brain.svg"></div>
+          <a id="title">Titulo</a>
+        </div>
         <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo sodales nunc, at mollis.</p>
     </article>
   </section>
