@@ -1,3 +1,6 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
 /* Variaveis de cor */
 :root{
     --firstColor: #708365;
@@ -13,7 +16,7 @@ body{
   background: #F2F5F2;
 }
 body, *{
-font-family: 'Istok Web', sans-serif;
+    font-family: 'Istok Web', sans-serif;
 }
 
 /* Scrollbar customizada */

@@ -1,16 +1,19 @@
 .menu{
   display: flex;
-  position: fixed;
-  top: 0;
+  align-items: center;
+  
   width: 100%;
   height: 48px;
   padding: 0 20px;
-  box-sizing: border-box;
-  list-style: none;
-  align-items: center;
+
+  position: fixed;
+  top: 0;
+  
   font-size: 18px;
-  z-index: 99;
+  list-style: none;
   overflow: hidden;
+  box-sizing: border-box;
+  z-index: 99;
 }
 .menu:not(.menu.transparent){
   background-color: var(--bgColor);
@@ -34,17 +37,19 @@
   margin-right: auto;
 }
 .menu .submenu > * > *, .menu button{
-  padding: 15px 25px;
-  color: white;
-  text-transform: capitalize;    
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+
+  min-width: 80px;
   height: 100%;
+  color: white;
+  text-transform: capitalize;    
+  text-decoration: none;
+
+  padding: 15px 25px;
   box-sizing: border-box;
   cursor: pointer;
-  min-width: 80px;
   transition: background .3s;
 }
 .menu > .submenu > *:hover, .menu button:hover{
@@ -54,10 +59,11 @@
 .menu #homeicon{    
   display: none;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   background-color: transparent;
   border: none;
+
+  margin: 0;
+  padding: 0;
 }
 .menu #homeicon:focus{
   outline: none;
@@ -69,11 +75,12 @@
 
 .submenu{
   display: flex;
-  height: 48px;
-  box-sizing: border-box;
-  list-style: none;
   align-items: center;
+
+  height: 48px;
   margin: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 
@@ -82,46 +89,38 @@
 }
 #homeicon span
 {
-  display: block;
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
   background: #cdcdcd;
   border-radius: 3px;
-  
+  margin-bottom: 5px;
+
+  display: block;
+  position: relative;
   z-index: 1;
   
   transform-origin: 4px 0px;
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
 }
 #homeicon input{
+  width: 100%;
+  height: 100%;
+
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+
   opacity: 0;
   z-index: 9;
 }
-#homeicon span{
-  transform: translateX(70%);
-}
-#homeicon span:first-child
-{
-  transform-origin: 0% 0%;
-}
-#homeicon span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
+#homeicon span{ transform: translateX(70%); }
+#homeicon span:first-child{ transform-origin: 0% 0%; }
+#homeicon span:nth-last-child(2){ transform-origin: 0% 100%; }
 #homeicon input:checked ~ span
 {
+  background: #ffffff;
   opacity: 1;
   transform: rotate(45deg) translateX(20px) translateY(-34px);
-  background: #ffffff;
 }
 #homeicon input:checked ~ span:nth-last-child(3)
 {
@@ -134,8 +133,8 @@
 }
 #homeicon input ~ span{
   position: relative;
-  transition: all .5s;
   left: 5px;
+  transition: all .5s;
 }
 #homeicon input:checked ~ span{    
   top: -5px;
@@ -162,28 +161,28 @@
   }
   .menu #homeicon{
     display: block;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
   }
 
   .menu.opened > .submenu{
-    background-color: inherit;
     display: flex;
-    position: absolute;
-    top: 0;
-    transform: translateY(48px);
     flex-direction: column;
-    padding: 0;
+
     width: 100%;
     height: fit-content;
+    background-color: inherit;
+    padding: 0;
     box-shadow: 0px 14px 12px 0px #0000003a;
+
+    transform: translateY(48px);
+    position: absolute;
+    top: 0;
   }
   .menu.opened > .submenu > :is(*, * > *){
     width: 100%;
   }
 }
 
+/* ------- Configurações para CELULAR */
 @media(max-width: 520px){
   .menu.opened > .submenu{
     height: 100vh;
