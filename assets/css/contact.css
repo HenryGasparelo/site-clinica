@@ -182,7 +182,8 @@ body::before{
     .mainInfo{        
         flex-direction: column;
         display: flex;
-        height: 575px;
+        min-height: 575px;
+        height: fit-content;
 
         margin: 0 auto;
         margin: 10px;

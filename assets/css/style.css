@@ -233,13 +233,15 @@ header .description{
 @media(max-width: 520px){
   header{
     min-height: 600px;
+    padding: 5px;
   }
   header .content{
     margin-left: 0;
     background: linear-gradient(0deg, #eab11094 0%, transparent 100%);
     border-radius: 0 0 10px 10px;
-    margin: 10px;
     backdrop-filter: blur(1.5px);
+    margin: 10px;
+    margin-bottom: 30px;
   }
   header .content :is(h1, p){
     margin: 0 20px!important;
@@ -258,20 +260,25 @@ header .description{
     transform: translateX(-70%) scale(1.2);
   }
 
+  .boxes .box{
+    min-height: 195px;
+    height: fit-content;
+  }
   .boxes .box .title{
     flex-direction: row;
     justify-content: start;
   }
   .boxes .box .title #title{
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
   }
   .boxes .box #description{
     text-align: left;
+    font-size: 18px;
   }
   .boxes .box #icon{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .bottom h1{
