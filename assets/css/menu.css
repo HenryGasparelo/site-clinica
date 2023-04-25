@@ -23,8 +23,11 @@
   background-color: var(--bgColor);
   transition: background-color .5s;
 }
-.menu .logo{
-  color: white;
+.menu .logo > img{
+  position: relative;
+  top: 3px;
+  height: 38px;
+  width: auto;
 }
 .menu.transparent{
   background-color: transparent!important;
@@ -150,6 +153,9 @@
     overflow: visible;
     padding-left: 0;
     padding-right: 0;
+  }
+  .menu .logo > img{
+    left: 10px;
   }
 
   .menu.opened, .menu.opened.style{

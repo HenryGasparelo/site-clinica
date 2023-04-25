@@ -83,6 +83,7 @@ header h1{
 header .description{
   max-width: 580px;
   font-size: 20px;
+  text-align: justify;
 }
 
 
@@ -93,14 +94,13 @@ header .description{
 .boxes .box{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 25px;
 
   width: 100%;
   min-height: 400px;
   background: var(--bgColor);  
-  padding: 20px;
+  padding: 60px 20px;
 
   color: white;
   box-sizing: border-box;
@@ -198,8 +198,7 @@ header .description{
   }
 
   .boxes .box{
-    min-height: 0;
-    height: 260px;
+    min-height: 260px;
     gap: 10px;
   }
   .boxes .box > *{

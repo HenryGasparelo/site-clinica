@@ -151,6 +151,7 @@ body::before{
 .moreInfo p{
     text-align: justify;
     line-height: 24px;
+    margin: 10px 0;
 }
 .moreInfo.opened{
     max-height: 300px;

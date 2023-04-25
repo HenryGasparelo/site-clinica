@@ -86,20 +86,27 @@ body > .title::after{
     color: white;
 
     box-sizing: border-box;
-    overflow: hidden;
 }
 .boxes > .box > .title{
     display: flex;
     flex-direction: row;
     gap: 10px;
 
-    height: 20px;
+    min-height: 15px;
+    height: fit-content;
     background-color: #00000038;
-    background: linear-gradient(0deg, transparent 12.5%, #00000038 100%);
+    border-radius: 10px 10px 0 0;
+    box-sizing: content-box;
+    /* background: linear-gradient(0deg, transparent 12.5%, #00000038 100%); */
     padding: 15px;
+    padding-bottom: 5px;
+    position: relative;
 }
 .boxes > .box > .title > *{
     margin: 0;
+}
+.boxes > .box > .title > h1{
+    margin-right: auto;
 }
 .boxes > .box > .title > #icon{
     width: 25px;
@@ -113,8 +120,7 @@ body > .title::after{
 
     color: white;
     font-size: 18px;
-
-    margin-left: auto;
+    
     transform: rotate(180deg);
 }
 .boxes > .box > .content{
@@ -129,6 +135,12 @@ body > .title::after{
 .boxes > .box > .content > *{
     margin: 0;
 }
+.boxes > .box > .content > #duration{
+    background-color: #242934;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
 
 
 /* ------- Configurações para TABLET */
@@ -137,9 +149,19 @@ body > .title::after{
         display: flex;
         flex-direction: column;
         grid-template-areas: none;
+        gap: 20px;
     }
     .boxes > .box > .title > .btn{
         display: block;
+    }
+    .boxes > .box > .title > #price{
+        position: absolute;
+        top: -15px;
+        right: -7px;
+        padding: 5px 15px;
+        border-radius: 100vmax;
+        background-color: #1c1f27;
+        z-index: 2;
     }
 }
 
