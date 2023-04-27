@@ -105,6 +105,9 @@ body::before{
     text-decoration: none;
     position: relative;
 }
+.mainInfo .options .option p{
+    margin: 0;
+}
 .mainInfo .options .option #icon{
     width: 30px;
     height: 30px;

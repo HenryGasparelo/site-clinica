@@ -33,6 +33,9 @@
   background-color: transparent!important;
   transition: background-color .5s;
 }
+.menu.transparent.bef{
+  transition: none!important;
+}
 .submenu #selected{
   background: #0000000c;
 }
