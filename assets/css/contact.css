@@ -7,11 +7,12 @@
 /* ------- Configurações BODY */
 body{
     width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 body::before{
@@ -45,6 +46,13 @@ body::before{
     transition: filter .5s;
     filter: brightness(.8);
 }
+.btn img{
+    filter: invert(.8);
+}
+.btn p{
+    color: #383838;
+    font-weight: 650;
+}
 
 
 /* ------- Configurações style para caixas */
@@ -64,6 +72,7 @@ body::before{
     display: flex;
     gap: 20px;
     height: 400px;
+    margin-top: 25vh;
 }
 .mainInfo > *{
     width: 50%;
@@ -170,10 +179,6 @@ body::before{
 
 /* ------- Configurações para TABLET */
 @media(max-width: 820px){
-    body{
-        max-width: 100%;
-        justify-content: start;
-    }
 
     .container{
         max-width: 400px;
@@ -208,6 +213,10 @@ body::before{
 
     .moreInfo.opened{
         max-height: 500px;
+    }
+
+    #readMore{
+        padding-bottom: 10px;
     }
 }
 

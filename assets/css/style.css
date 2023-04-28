@@ -47,13 +47,13 @@ header .content .btn > *{
 
   text-align: center;
   font-size: 16px;
-  color: white;
+  color: #5C5C5C;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 header .content .btn > *:hover{
-  background-color: #d8ad02;
+  filter: brightness(.9);
 }
 
 .faceSide{
@@ -84,6 +84,9 @@ header .description{
   max-width: 580px;
   font-size: 20px;
   text-align: justify;
+  /*backdrop-filter: blur(7px);
+  background-color: #f2f5f238;*/
+  padding: 10px;
 }
 
 
@@ -102,7 +105,7 @@ header .description{
   background: var(--bgColor);  
   padding: 60px 20px;
 
-  color: white;
+  color: #1D1D1D;
   box-sizing: border-box;
 }
 .boxes .box .title{
@@ -119,13 +122,14 @@ header .description{
 
   width: 80px;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.11);
+  background-color: #ffffff33;
   border-radius: 100vmax;
 }
 .boxes .box #icon img{
   width: 40px;
   height: 40px;
   margin: 10px;
+  filter: invert(.9);
 }
 
 .boxes .box #title{
@@ -151,7 +155,7 @@ header .description{
 }
 
 .bottom > h1{
-  color: var(--secondColor);
+  color: #1D1D1D;
   font-size: 35px;
 }
 .bottom > p{
@@ -191,11 +195,20 @@ header .description{
   }
   .content .description{
     color: white;
+    background-color: unset;
+  }
+
+  header .content{
+    margin-top: 55px!important;
+  }
+
+  header h1{
+    font-size: 40px;
   }
 
   .boxes{
     flex-direction: column;
-  }
+  }  
 
   .boxes .box{
     min-height: 260px;
@@ -207,13 +220,13 @@ header .description{
     width: 100%;
   }
   
-  .boxes > *:nth-child(1n){ background: linear-gradient(180deg, #878E4F 0%, #7C853D 100%); }
-  .boxes > *:nth-child(2n){ background: linear-gradient(180deg, #F3B60D 0%, #E7AB10 100%); }
-  .boxes > *:nth-child(3n){ background: linear-gradient(180deg, #736EAC 0%, #5E57A4 100%); }
+  .boxes > *:nth-child(1n){ background: var(--firstDegrade); }
+  .boxes > *:nth-child(2n){ background: var(--secondDegrade); }
+  .boxes > *:nth-child(3n){ background: var(--thirdDegrade); }
 
   .boxes .box #icon{
     --size: 60px;
-  }
+  }  
 
   .bottom{
     margin: 0 20px;

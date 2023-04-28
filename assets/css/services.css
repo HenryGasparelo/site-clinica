@@ -1,6 +1,6 @@
 /* Mudar cor de fundo do menu por página */
 .menu{
-    --bgColor: var(--fourColor);
+    --bgColor: #3c445a;
 }
 
 

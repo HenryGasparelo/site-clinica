@@ -3,11 +3,25 @@
 
 /* Variaveis de cor */
 :root{
+    --firstColor: #59B1D6;
+    --secondColor: #EDD75A;
+    --thirdColor: #9C7ED6;
+    --fourColor: #2f3544;
+
+    --firstDegrade: linear-gradient(180deg, #59B1D6 0%, rgb(98, 162, 214) 100%);
+    --secondDegrade: linear-gradient(180deg, #EDD75A 0%, #f7d154 100%);
+    --thirdDegrade: linear-gradient(180deg, #9C7ED6 0%, #a485e2 100%);
+}
+
+/* Variaveis antigas de cor */
+/*
+:root{
     --firstColor: #708365;
     --secondColor: #EAB110;
     --thirdColor: #736EAC;
     --fourColor: #2f3544;
 }
+*/
 
 
 /* Body présetado */
