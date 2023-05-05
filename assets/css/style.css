@@ -10,7 +10,8 @@ header{
   flex-direction: column;
   justify-content: center;
 
-  min-height: 90vh;
+  min-height: 90vh; /* Quebra como a imagem se posiciona */
+  /* min-height: 865px; */
   padding: 0 20px;
   
   position: relative;
@@ -66,6 +67,7 @@ header .content .btn > *:hover{
 .faceSide img{
   width: auto;
   height: 90%;
+  transition: transform .5s;
 
   position: relative;
   top: 10%;
@@ -164,11 +166,16 @@ header .description{
 }
 
 
-/* ------- Configurações para TABLET */
-@media(max-width: 820px){
-  header{
-    min-height: 700px;
+
+@media(max-width: 1200px){
+  .faceSide img{
+    transform: translateX(30%);
+    transition: transform .5s;
   }
+}
+
+
+@media(max-width: 1000px){
   header::before{
     height: 1000px;
     background-color: #ff7919;
@@ -192,12 +199,20 @@ header .description{
   }
   .faceSide img{
     opacity: 40%;
+    transform: translateX(0%);
+  }
+
+  header{
+    min-height: 700px;
   }
   .content .description{
     color: white;
     background-color: unset;
   }
+}
 
+/* ------- Configurações para TABLET */
+@media(max-width: 820px){
   header .content{
     margin-top: 55px!important;
   }
