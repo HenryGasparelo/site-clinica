@@ -129,6 +129,9 @@ body::before{
     width: 100%;
     height: 100%;
 }
+.mainInfo .options .option :is(p, #icon img):focus{
+    outline: 1px solid black;
+}
 
 #readMore{
     color: var(--firstColor);
