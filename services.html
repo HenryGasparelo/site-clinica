@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/services.css">
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" href="assets/imgs/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
   <script src="assets/scripts/menu.js"></script>
 </head>
 
@@ -30,6 +30,36 @@
     </ul>
   </nav>
 
+  <script>
+    window.addEventListener("load", (e) => {
+      var boxes = document.getElementsByClassName('box');
+      var titles = document.getElementsByClassName('title');
+      for(var i = 1; i <= boxes.length; i++){
+        var box = boxes[i - 1];
+        box.id = 'box' + i;
+        titles[i].setAttribute('onclick', 'killme(' + i + ')');
+        if(i != 1) box.classList.add('closed');
+        else {
+          box.classList.add('opened')
+        }
+      }
+    });
+
+    function killme(num){
+      if(document.body.offsetWidth > 820) return;
+      
+      var box = document.getElementById('box' + num);
+      var bc = box.classList;
+      if(bc.contains('opened')){
+        bc.add('closed');
+        bc.remove('opened');
+      } else {
+        bc.add('opened');
+        bc.remove('closed');
+      }
+    }
+  </script>
+
   <h1 class="title" tabindex="6">Atendimentos disponibilizados</h1>
 
   <section class="boxes">
@@ -38,82 +68,93 @@
         <span id="icon"><img src="assets/imgs/svg/house.svg"></span>
         <h1 tabindex="7">Psicoterapia Individual</h1>
         <span id="price" tabindex="8">R$ 100,00</span>
-        <button class="btn">▲</button>
+        <button class="btn" tabindex="9">▲</button>
       </div>
       <div class="content">
-        <p tabindex="9">A psicoterapia individual é um atendimento no qual podemos ter maior compreensão dos nossos processos emocionais. Através dela você pode aprender a valorizar sua existência, entender seu mundo interno, subjetividades e sentimentos. Benefícios que farão diferença na sua felicidade e satisfação com a vida. Pode ser um caminho cheio de surpresas e desafios. Vamos começar juntos?</p>
-        <p id="duration" tabindex="10">Tem duração de 50 minutos</p>
+        <p tabindex="10">A psicoterapia individual é um atendimento no qual podemos ter maior compreensão dos nossos processos emocionais. Através dela você pode aprender a valorizar sua existência, entender seu mundo interno, subjetividades e sentimentos. Benefícios que farão diferença na sua felicidade e satisfação com a vida. Pode ser um caminho cheio de surpresas e desafios. Vamos começar juntos?</p>
+        <p id="duration" tabindex="11">Tem duração de 50 minutos</p>
       </div>
     </article>
 
     <article class="box">
       <div class="title">
         <span id="icon"><img src="assets/imgs/svg/house.svg" alt="Imagem ilustrativa representando uma casa"></span>
-        <h1 tabindex="11">Anamnese</h1>
-        <span id="price" tabindex="12">R$ 120,00</span>
-        <button class="btn">▲</button>
+        <h1 tabindex="12">Anamnese</h1>
+        <span id="price" tabindex="13">R$ 120,00</span>
+        <button class="btn" tabindex="14">▲</button>
       </div>
       <div class="content">
-        <p tabindex="13">É uma espécie de entrevista realizada pelo psicólogo com os pais/responsáveis pela criança, para obter dados e informações relevantes para o processo de psicoterapia infantil e adolescente.</p>
-        <p id="duration" tabindex="14">Tem duração de 1 hora</p>
+        <p tabindex="15">É uma espécie de entrevista realizada pelo psicólogo com os pais/responsáveis pela criança, para obter dados e informações relevantes para o processo de psicoterapia infantil e adolescente.</p>
+        <p id="duration" tabindex="16">Tem duração de 1 hora</p>
       </div>
     </article>
 
     <article class="box">
       <div class="title">
         <span id="icon"><img src="assets/imgs/svg/house.svg" alt="Imagem ilustrativa representando uma casa"></span>
-        <h1 tabindex="15">Assessoria de Sling</h1>
-        <span id="price" tabindex="16">R$ 60,00</span>
-        <button class="btn">▲</button>
+        <h1 tabindex="17">Assessoria de Sling</h1>
+        <span id="price" tabindex="18">R$ 60,00</span>
+        <button class="btn" tabindex="19">▲</button>
       </div>
       <div class="content">
-        <p tabindex="17">Os Slings Nina Nenê são carregadores de bebês feitos em tecidos. Estão prontos para serem usados de imediato para facilitar o dia a dia da família. Temos 3 tipos de carregadores disponíveis.</p>
-        <p tabindex="18">É um atendimento individualizado de orientação em como usar o seu carregador de forma ergonômica. Respeitando a fisiologia do bebê e a de quem o carrega.</p>
-        <p tabindex="19">O cliente já pode ter seu carregador ou receber esta orientação na compra do Sling Nina Nenê.</p>
-        <p id="duration" tabindex="20">Tem duração de 30 min</p>
+        <p tabindex="20">Os Slings Nina Nenê são carregadores de bebês feitos em tecidos. Estão prontos para serem usados de imediato para facilitar o dia a dia da família. Temos 3 tipos de carregadores disponíveis.</p>
+        <p tabindex="21">É um atendimento individualizado de orientação em como usar o seu carregador de forma ergonômica. Respeitando a fisiologia do bebê e a de quem o carrega.</p>
+        <p tabindex="22">O cliente já pode ter seu carregador ou receber esta orientação na compra do Sling Nina Nenê.</p>
+        <p id="duration" tabindex="23">Tem duração de 30 min</p>
       </div>
     </article>    
 
     <article class="box">
       <div class="title">
         <span id="icon"><img src="assets/imgs/svg/house.svg" alt="Imagem ilustrativa representando uma casa"></span>
-        <h1 tabindex="21">Shantala</h1>
-        <span id="price" tabindex="22">R$ 150,00</span>
-        <button class="btn">▲</button>
+        <h1 tabindex="24">Shantala</h1>
+        <span id="price" tabindex="25">R$ 150,00</span>
+        <button class="btn" tabindex="26">▲</button>
       </div>
       <div class="content">
-        <p tabindex="23">A shantala é uma massagem realizada no bebê por seus cuidadores. Ela tem objetivo de estimular o bebê e vincular a relação entre os pais. Ela tem benefícios que vão desde relaxamento, funcionamento dos órgãos internos, como sistema digestivo e respiratório, flexibilidade dos membros, como fortalecimento do sistema imunológico. É uma sessão de 1hora em que realizado o passo a passo da massagem. Acompanha uma apostila para os pais se lembrarem e fazerem em casa o uso da prática</p>
-        <p tabindex="24">É uma sessão em que é realizado o passo a passo da massagem. Acompanha uma apostila para os pais se lembrarem e fazerem em casa o uso da prática</p>
-        <p id="duration" tabindex="25">Tem duração de 1 hora</p>
+        <p tabindex="27">A shantala é uma massagem realizada no bebê por seus cuidadores. Ela tem objetivo de estimular o bebê e vincular a relação entre os pais. Ela tem benefícios que vão desde relaxamento, funcionamento dos órgãos internos, como sistema digestivo e respiratório, flexibilidade dos membros, como fortalecimento do sistema imunológico. É uma sessão de 1hora em que realizado o passo a passo da massagem. Acompanha uma apostila para os pais se lembrarem e fazerem em casa o uso da prática</p>
+        <p tabindex="28">É uma sessão em que é realizado o passo a passo da massagem. Acompanha uma apostila para os pais se lembrarem e fazerem em casa o uso da prática</p>
+        <p id="duration" tabindex="29">Tem duração de 1 hora</p>
       </div>
     </article>
 
     <article class="box">
       <div class="title">
         <span id="icon"><img src="assets/imgs/svg/house.svg" alt="Imagem ilustrativa representando uma casa"></span>
-        <h1 tabindex="26">Orientação de Pais</h1>
-        <span id="price" tabindex="27">R$ 200,00</span>
-        <button class="btn">▲</button>
+        <h1 tabindex="30">Orientação de Pais</h1>
+        <span id="price" tabindex="31">R$ 200,00</span>
+        <button class="btn" tabindex="32">▲</button>
       </div>
       <div class="content">
-        <p tabindex="28">É um momento realizado com os pais, na qual é conversado sobre o desenvolvimento infantil, a partir das demandas e dúvidas dos pais. Tem objetivo de informar, auxiliar com as questões trazidas e fotalecer os vínculos existentes.</p>
-        <p id="duration" tabindex="29">Tem duração de 1 hora e 30 min</p>
+        <p tabindex="33">É um momento realizado com os pais, na qual é conversado sobre o desenvolvimento infantil, a partir das demandas e dúvidas dos pais. Tem objetivo de informar, auxiliar com as questões trazidas e fotalecer os vínculos existentes.</p>
+        <p id="duration" tabindex="34">Tem duração de 1 hora e 30 min</p>
       </div>
     </article>
 
     <article class="box">
       <div class="title">
         <span id="icon"><img src="assets/imgs/svg/house.svg" alt="Imagem ilustrativa representando uma casa"></span>
-        <h1 tabindex="30">Psicoterapia de Casal</h1>
-        <span id="price" tabindex="31">R$ 180,00</span>
-        <button class="btn">▲</button>
+        <h1 tabindex="35">Psicoterapia de Casal</h1>
+        <span id="price" tabindex="36">R$ 180,00</span>
+        <button class="btn" tabindex="37">▲</button>
       </div>
       <div class="content">
-        <p tabindex="32">A psicoterapia de casal ou conjugal é um atendimento no qual consiste da participação de ambos. Ela tem o objetivo de melhorar a convivência do casal. Diminuindo os conflitos, aumentando e fazendo ser mais assertiva a comunicação. Como também fortalecer o vínculo entre os pares, sendo grande aliada a fim de evitar maiores conflitos. </p>
-        <p id="duration" tabindex="33">Tem duração de 1 hora e 30 min</p>
+        <p tabindex="38">A psicoterapia de casal ou conjugal é um atendimento no qual consiste da participação de ambos. Ela tem o objetivo de melhorar a convivência do casal. Diminuindo os conflitos, aumentando e fazendo ser mais assertiva a comunicação. Como também fortalecer o vínculo entre os pares, sendo grande aliada a fim de evitar maiores conflitos. </p>
+        <p id="duration" tabindex="39">Tem duração de 1 hora e 30 min</p>
       </div>
     </article>
   </section>
+
+  <div vw class="enabled" style="margin-right: 10px;">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 
 </html>

@@ -8,6 +8,8 @@
     --thirdColor: #9C7ED6;
     --fourColor: #2f3544;
 
+    --darkFourColor: #1d212b;
+
     --firstDegrade: linear-gradient(180deg, #59B1D6 0%, rgb(98, 162, 214) 100%);
     --secondDegrade: linear-gradient(180deg, #EDD75A 0%, #f7d154 100%);
     --thirdDegrade: linear-gradient(180deg, #9C7ED6 0%, #a485e2 100%);
@@ -38,3 +40,10 @@ body, *{
 ::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb { background: #d8d8d8; }
 ::-webkit-scrollbar-thumb:hover { background: #b6b6b6; }
+
+/* ------- Configurações para TABLET */
+@media(max-width: 820px){
+    .submenu li{
+        font-size: 20px;
+    }
+}

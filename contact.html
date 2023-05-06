@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/contact.css">
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" href="assets/imgs/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/imgs/favicon.png" type="image/x-icon">
   <script src="assets/scripts/menu.js"></script>
 </head>
   <script>
@@ -82,12 +82,23 @@
 
     <div class="container moreInfo closed" id="moreInfo">
       <h1 tabindex="13">Como agendar seu horário?</h1>
-      <p tabindex="14">Todos os atendimentos são realizados com horário marcado pelo whats 44- 99987-4130.</p>
+      <p tabindex="14">Todos os atendimentos são realizados com horário marcado pelo whats (44) 99987-4130.</p>
       <p tabindex="15">Após serem agendados são confirmados e pedimos para que caso não possa comparecer seja avisado com 12h de antecedência. </p>
       <p tabindex="16">Atendimentos que não são desmarcados são cobrados.</p>
       <p tabindex="17">Os horários para atendimentos são de segunda à sexta todas as manhãs e algumas tardes e sábados específicos.</p>
       <p tabindex="18">Esperamos pela colaboração de todos.</p>
     </div>
+
+    <div vw class="enabled" style="margin-right: 10px;">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

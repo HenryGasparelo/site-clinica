@@ -14,7 +14,7 @@
   list-style: none;
   overflow: hidden;
   box-sizing: border-box;
-  z-index: 99;
+  z-index: 1;
 }
 .menu:not(.menu.transparent){
   background-color: var(--bgColor);

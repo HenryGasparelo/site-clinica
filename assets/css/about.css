@@ -46,7 +46,7 @@ header .content{
 header .content *{
     margin: 0;
 }
-header .content .btn > *{
+header .content .btn{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +66,7 @@ header .content .btn > *{
 
     cursor: pointer;
 }
-header .content .btn > *:hover{
+header .content .btn:hover{
     background-color: rgb(249, 239, 255);
 }
 
@@ -183,7 +183,7 @@ header p{
 /* ------- Configurações LAPTOP */
 @media(max-width: 1200px){
     header{
-        height: 490px;
+        height: 510px;
         padding-bottom: 20px;
         padding-top: 30px;
     }
@@ -212,6 +212,10 @@ header p{
     header .content h1{
         max-width: 250px;
         margin-left: 145px;
+    }
+
+    header .content .btn{
+        margin-bottom: 20px;
     }
 }
 
@@ -263,6 +267,9 @@ header p{
     header .thumbnail{
         position: relative;
         top: 20px;
+    }
+    header .content .btn{
+        margin-bottom: 0;
     }
 
     .boxes > *{        

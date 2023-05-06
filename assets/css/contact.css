@@ -134,7 +134,7 @@ body::before{
     color: var(--firstColor);
     padding: 0;
     margin: 0;
-    font-size: 17.5px;
+    font-size: 19px;
     display: flex;
     gap: 5px;
 }
@@ -164,6 +164,7 @@ body::before{
     text-align: justify;
     line-height: 24px;
     margin: 10px 0;
+    font-size: 19px;
 }
 .moreInfo.opened{
     max-height: 300px;
