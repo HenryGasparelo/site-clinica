@@ -108,7 +108,7 @@ header p{
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 0.5;
+    z-index: 2;
 
     border-style: solid;
     border-width: 20px 100vw 0 0;
@@ -141,6 +141,7 @@ header p{
     width: 280px;
     height: 100%;
     border-radius: 10px;
+    background-color: var(--boxColor);
     color: #1D1D1D;
     padding: 30px 20px;
     
@@ -150,13 +151,13 @@ header p{
 }
 
 .boxes > *:nth-child(1n){
-    background-color: var(--firstColor);
+    --boxColor: var(--firstColor);
 }
 .boxes > *:nth-child(2n){
-    background-color: var(--secondColor);
+    --boxColor: var(--secondColor);
 }
 .boxes > *:nth-child(3n){
-    background-color: var(--thirdColor);
+    --boxColor: var(--thirdColor);
 }
 
 .boxes > .box .icon{
@@ -164,7 +165,7 @@ header p{
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(0, 0, 0, 0.192);
+    background-color: #00000024;
     border-radius: 100vmax;
     margin: 0 auto;
     width: 120px;
@@ -173,6 +174,7 @@ header p{
 .boxes > .box .icon img{
     width: 70px;
     height: 70px;
+    filter: invert(.8);
 }
 
 .boxes .description{
@@ -249,6 +251,15 @@ header p{
         width: 200px;
         height: 200px;
         opacity: 10%;
+    }
+    .boxes > .box .icon::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: -20px;
+        right: 40px;
+        background: linear-gradient(90deg, var(--boxColor) 0%, transparent 100%);;
     }
 }
 

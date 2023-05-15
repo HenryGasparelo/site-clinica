@@ -1,6 +1,6 @@
 /* Mudar cor de fundo do menu por página */
-.menu{
-  --bgColor: #F27405;
+.menu, *{
+  --bgColor: #ffb803;
 }
 
 
@@ -124,7 +124,7 @@ header .description{
 
   width: 80px;
   height: 80px;
-  background-color: #ffffff33;
+  background-color: #00000024;
   border-radius: 100vmax;
 }
 .boxes .box #icon img{
@@ -178,7 +178,7 @@ header .description{
 @media(max-width: 1000px){
   header::before{
     height: 1000px;
-    background-color: #ff7919;
+    background-color: var(--bgColor);
     background-image: unset;
   }
   .faceSide{
@@ -187,7 +187,7 @@ header .description{
   }
   .faceSide::before{
     width: 120vw;
-    background: linear-gradient(0deg, #ff7919 0%, transparent 50%);
+    background: linear-gradient(0deg, var(--bgColor) 0%, transparent 50%);
 
     content: '';
     position: absolute;

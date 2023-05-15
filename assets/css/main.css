@@ -1,16 +1,17 @@
 /* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 /* Variaveis de cor */
 :root{
-    --firstColor: #59B1D6;
+    --firstColor: #7188FF;
     --secondColor: #EDD75A;
     --thirdColor: #9C7ED6;
     --fourColor: #2f3544;
 
     --darkFourColor: #1d212b;
 
-    --firstDegrade: linear-gradient(180deg, #59B1D6 0%, rgb(98, 162, 214) 100%);
+    --firstDegrade: linear-gradient(180deg, #7188FF 0%, #687ff5 100%);
     --secondDegrade: linear-gradient(180deg, #EDD75A 0%, #f7d154 100%);
     --thirdDegrade: linear-gradient(180deg, #9C7ED6 0%, #a485e2 100%);
 }
