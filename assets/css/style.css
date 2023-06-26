@@ -41,15 +41,16 @@ header .content{
 }
 header .content .btn > *{
   width: 200px;
-  background-color: var(--secondColor);
+  background-color: #ffde21;
   padding: 10px 30px;
-  border-radius: 100vmax;
+  border-radius: 16px;
   cursor: pointer;
+  font-weight: 500;
 
   text-align: center;
-  font-size: 16px;
-  color: #5C5C5C;
-  text-transform: uppercase;
+  font-size: 18px;
+  color: #2F321C;
+  text-transform: capitalize;
   text-decoration: none;
 }
 
@@ -67,6 +68,7 @@ header .content .btn > *:hover{
 .faceSide img{
   width: auto;
   height: 90%;
+  transform: scale(.95) translateY(20px);
   transition: transform .5s;
 
   position: relative;
@@ -178,7 +180,7 @@ header .description{
 @media(max-width: 1000px){
   header::before{
     height: 1000px;
-    background-color: var(--bgColor);
+    background-color: #ff8b07;
     background-image: unset;
   }
   .faceSide{
@@ -187,7 +189,7 @@ header .description{
   }
   .faceSide::before{
     width: 120vw;
-    background: linear-gradient(0deg, var(--bgColor) 0%, transparent 50%);
+    background: linear-gradient(0deg, #ff8b07 0%, transparent 50%);
 
     content: '';
     position: absolute;

@@ -180,6 +180,20 @@ body::before{
     margin: 0;
 }
 
+.moreInfo > p{
+    position: relative;
+}
+.moreInfo > p::before{
+    position: absolute;
+    left: -10px;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100vmax;
+    content: '';
+    background-color: rgb(0, 0, 0);
+  }
+
 
 /* ------- Configurações para TABLET */
 @media(max-width: 820px){

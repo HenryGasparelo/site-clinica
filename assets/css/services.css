@@ -1,12 +1,29 @@
 /* Mudar cor de fundo do menu por página */
 .menu{
-    --bgColor: #3c445a;
+    --bgColor: #9C7ED6;
 }
 
 
 /* ------- Configurações gerais */
 body{
     padding: 30px 0;
+    background-color: #dfdede;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 5%;
+    filter: blur(5px);
+    z-index: -1;
+
+    background-image: url(../imgs/fundoclinica.jpeg);
+    background-size: 1950px 1000px;
+    background-position: center;
 }
 
 body > .title{
@@ -86,7 +103,7 @@ body > .title::after{
     padding: 0;
 
     box-sizing: border-box;
-    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.164);
+    box-shadow: 0px -4px 15px #0000002a;
     --bgColor: var(--fourColor);
 }
 
