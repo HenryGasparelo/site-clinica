@@ -164,28 +164,30 @@ header .description{
 }
 .bottom > p{
   font-size: 18px;
-  margin: 0 10px;
+  margin: 0 50px;
+  text-align: center;
 }
 
 
 
 @media(max-width: 1200px){
   .faceSide img{
-    transform: translateX(30%);
+    transform: translateX(10%);
     transition: transform .5s;
   }
 }
 
 
-@media(max-width: 1000px){
+@media(max-width: 1120px){
   header::before{
     height: 1000px;
     background-color: #ff8b07;
     background-image: unset;
   }
   .faceSide{
+    width: fit-content;
     left: 50%;
-    transform: translateX(-70%);
+    transform: translateX(-50%);
   }
   .faceSide::before{
     width: 120vw;
@@ -206,6 +208,10 @@ header .description{
 
   header{
     min-height: 700px;
+  }
+  header .content{
+    margin-left: 0;
+    margin: 0 auto;
   }
   .content .description{
     color: white;
@@ -254,6 +260,7 @@ header .description{
   .bottom p{
     text-align: center;
     font-size: 18px;
+    margin: 0 10px;
   }
 }
 
@@ -289,7 +296,7 @@ header .description{
   }
 
   .faceSide {
-    transform: translateX(-70%) scale(1.2);
+    transform: translateX(-50%) scale(1.2);
   }
 
   .boxes .box{
