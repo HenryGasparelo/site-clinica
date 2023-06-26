@@ -170,7 +170,7 @@ body::before{
     font-size: 19px;
 }
 .moreInfo.opened{
-    max-height: 300px;
+    max-height: 335px;
     padding: 20px;
     margin: 10px;
 }
