@@ -9,11 +9,6 @@ body{
     width: 100vw;
     max-width: 100%;
     min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
 }
 body::before{
     content: '';
@@ -55,24 +50,30 @@ body::before{
 }
 
 
+
 /* ------- Configurações style para caixas */
 .container{
     background: rgba(242, 245, 242, 0);
     max-width: 600px;
     width: 100%;
     padding: 20px;
-    margin: 10px;
     border-radius: 10px;
     box-shadow: 0px -4px 45px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(21.5px);
     position: relative;
+}
+main{
+    width: fit-content;
+    transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 28vh));
+    margin: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .mainInfo{
     display: flex;
     gap: 20px;
     height: 400px;
-    margin-top: 25vh;
 }
 .mainInfo > *{
     width: 50%;
@@ -81,13 +82,14 @@ body::before{
 .mainInfo .content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .mainInfo .content > h1{
     text-align: center;
     font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
     color: var(--firstColor);
-    margin-bottom: 60px;
+
 }
 .mainInfo .options{
     display: flex;
@@ -100,7 +102,7 @@ body::before{
     padding: 0;
     list-style: none;
 }
-.mainInfo .options > *{
+.mainInfo .options > *, .contact .option{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,10 +116,10 @@ body::before{
     text-decoration: none;
     position: relative;
 }
-.mainInfo .options .option p{
+.mainInfo .options .option p, .contact .option p{
     margin: 0;
 }
-.mainInfo .options .option #icon{
+.mainInfo .options .option #icon, .contact .option #icon{
     width: 30px;
     height: 30px;
     position: absolute;
@@ -125,11 +127,11 @@ body::before{
     left: 15px;
     transform: translateY(-50%);
 }
-.mainInfo .options .option #icon img{
+.mainInfo .options .option #icon img, .contact .option #icon img{
     width: 100%;
     height: 100%;
 }
-.mainInfo .options .option :is(p, #icon img):focus{
+.mainInfo .options .option :is(p, #icon img):focus, .contact .option :is(p, #icon img):focus{
     outline: 1px solid black;
 }
 
@@ -137,6 +139,7 @@ body::before{
     color: var(--firstColor);
     padding: 0;
     margin: 0;
+    margin-top: 10px;
     font-size: 19px;
     display: flex;
     gap: 5px;
@@ -153,11 +156,20 @@ body::before{
     transition: transform .3s;
 }
 
+.contact .btn{
+    padding: 5px 10px;
+}
+.contact .btn #icon{
+    width: 20px;
+    height: 20px;
+}
 
 /* ------- Configurações style para caixa saiba mais */
 .moreInfo{
     overflow: hidden;
     transition: max-height .5s, margin .5s, padding .5s;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .moreInfo h1{
     font-size: 1.5rem;
@@ -172,7 +184,6 @@ body::before{
 .moreInfo.opened{
     max-height: 335px;
     padding: 20px;
-    margin: 10px;
 }
 .moreInfo.closed{
     max-height: 0px;
@@ -192,16 +203,50 @@ body::before{
     border-radius: 100vmax;
     content: '';
     background-color: rgb(0, 0, 0);
-  }
+}
 
+#psico{
+    text-align: left;
+    font-size: 21px;
+}
+
+.contact .sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.contact .sec > *{
+    color: black;
+    text-decoration: none;
+    height: fit-content;
+}
+#name{
+    font-size: 18px;
+    transition: color .5s;
+    min-width: 70px;
+}
+#name:hover{
+    color: var(--firstColor);
+    transition: color .3s;
+}
+.contact .sec .option{
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 /* ------- Configurações para TABLET */
 @media(max-width: 820px){
+    main{
+        transform: none;
+        margin: 0 auto;
+    }
 
     .container{
         max-width: 400px;
         width: 100%;
-        margin: 10px;
         padding: 10px;
         box-sizing: border-box;
     }
@@ -213,8 +258,7 @@ body::before{
         height: fit-content;
 
         margin: 0 auto;
-        margin: 10px;
-        margin-top: 100px;
+        margin-top: 70px;
     }
     .mainInfo > *{
         width: 100%;
@@ -248,4 +292,5 @@ body::before{
     body::before{
         opacity: 7%;
     }
+    
 }

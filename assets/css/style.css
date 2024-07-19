@@ -67,13 +67,11 @@ header .content .btn > *:hover{
 }
 .faceSide img{
   width: auto;
-  height: 90%;
-  transform: scale(.95) translateY(20px);
+  height: 110%;
   transition: transform .5s;
 
   position: relative;
-  top: 10%;
-  right: -20px;
+  top: -10%;
 }
 
 header .content :is(h1, p, .btn){
@@ -172,7 +170,7 @@ header .description{
 
 @media(max-width: 1200px){
   .faceSide img{
-    transform: translateX(10%);
+    transform: translateX(0%);
     transition: transform .5s;
   }
 }
